@@ -114,13 +114,13 @@ const UserDetailScreen = (props) => {
       </View>
       <View style={styles.btn}>
         <Button
-          title="Delete"
+          title="Borrar"
           onPress={() => openConfirmationAlert()}
           color="#E37399"
         />
       </View>
       <View>
-        <Button title="Update" onPress={() => updateUser()} color="#19AC52" />
+        <Button title="Actualizar" onPress={() => updateUser()} color="#19AC52" />
       </View>
     </ScrollView>
   );

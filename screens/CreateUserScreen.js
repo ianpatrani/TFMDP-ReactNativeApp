@@ -18,7 +18,7 @@ const AddUserScreen = (props) => {
 
   const saveNewUser = async () => {
     if (state.name === "") {
-      alert("please provide a name");
+      alert("No puede haber datos vacios");
     } else {
       try {
         await firebase.db.collection("users").add({
@@ -38,7 +38,7 @@ const AddUserScreen = (props) => {
       {/* Name Input */}
       <View style={styles.inputGroup}>
         <TextInput
-          placeholder="Name"
+          placeholder="Nombre y apellido"
           onChangeText={(value) => handleChangeText(value, "name")}
           value={state.name}
         />
@@ -47,7 +47,7 @@ const AddUserScreen = (props) => {
       {/* Email Input */}
       <View style={styles.inputGroup}>
         <TextInput
-          placeholder="Email"
+          placeholder="Timer"
           multiline={true}
           numberOfLines={4}
           onChangeText={(value) => handleChangeText(value, "email")}
@@ -58,14 +58,14 @@ const AddUserScreen = (props) => {
       {/* Input */}
       <View style={styles.inputGroup}>
         <TextInput
-          placeholder="phone"
+          placeholder="Penalizaciones"
           onChangeText={(value) => handleChangeText(value, "phone")}
           value={state.phone}
         />
       </View>
 
       <View style={styles.button}>
-        <Button title="Save User" onPress={() => saveNewUser()} />
+        <Button title="Guardar participante" onPress={() => saveNewUser()} />
       </View>
     </ScrollView>
   );

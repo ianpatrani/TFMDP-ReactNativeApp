@@ -28,7 +28,7 @@ const UserScreen = (props) => {
     <ScrollView>
       <Button
         onPress={() => props.navigation.navigate("CreateUserScreen")}
-        title="Create user"
+        title="Crear nuevo participante"
       />
       {users.map((user) => {
         return (
